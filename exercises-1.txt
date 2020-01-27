@@ -39,9 +39,11 @@ SET result400 TO tahun DIVIDE 400, CHECK result400 INTEGER or DECIMAL;
     ELSE
         DISPLAY 'Tahun ini bukan Kabisat'
     ENDIF
+
 .
 .
 .
+
 //  CARA YANG DIDAPAT SETELAH DISKUSI DENGAN MENTOR/ INSTRUKTUR
 //  ALGORITMA
 - Buat form input, dimana pengunjung bisa memasukkan tahun yang akan dicek.
@@ -50,6 +52,7 @@ SET result400 TO tahun DIVIDE 400, CHECK result400 INTEGER or DECIMAL;
     - Jika tahun yang diinput dibagi 4 hasil sisa baginya 0 dan tahun yang diinput dibagi 100 hasil sisa baginya TIDAK SAMA DENGAN 0, maka tampilkan pesan bahwa tahun yang diinput adalah "tahun kabisat."
     - Jika tahun yang diinput dibagi 4 hasil sisa baginya 0, dan tahun yang diinput dibagi 100 sisa hasil baginya juga 0, dan tahun yang diinput dibagi 400 sisa hasil baginya 0 juga, maka tampilkan pesan bahwa tahun yang diinput adalah "tahun kabisat."
     - Jika nilai di atas tidak terpenuhi, tampilkan hasilnya "bukan tahun kabisat."
+- Selesai.
 
 //  PSUEDOCODE
 SET tahun TO user input or any value;
@@ -74,7 +77,8 @@ SOAL 3. LAUNDRY DAY
 - Buat perulangan :
     - Setelah variabel awal dicetak, tampilkan pesan "Baju yang dimasukkan 1" dan tambahkan nilai 1 menggunakan increment, sebagai perintah agar Foxie memasukkan bajunya satu lagi ke mesin cuci, sampai total dimasukkan 20 baju.
     - Angka 1 pada pesan yang ditampilkan diambil dari nilai yang ditampung variabel awal.
-    - Jika variabel telah awal mencapai nilai 20, maka tampilkan pesan "Mesin Cuci Menyala".
+- Buat Kondisi : Jika variabel telah awal mencapai nilai 20, maka tampilkan pesan "Mesin Cuci Menyala".
+- Selesai.
 
 //  PSUEDOCODE
 SET jumlahBaju TO 1;
@@ -82,9 +86,11 @@ SET jumlahBaju TO 1;
 WHILE jumlahBaju <= 20
     DISPLAY Baju yang dimasukkan + jumlahBaju
 jumlahBaju increment; // ADD 1 TO jumlahBaju
+ENDWHILE
 
 IF jumlahBaju == 20
     DISPLAY Baju yang dimasukkan + jumlahBaju + mesin cuci akan menyala.
+ENDIF
 
 - - - - - - - - - - - - -
 - - - - - - - - - - - - -
@@ -92,6 +98,11 @@ IF jumlahBaju == 20
 
 SOAL 4. PERIKSA KUKU
 
+Pada soal PERIKSA KUKU ini Saya mencoba DUA cara :
+    1. Guru cek kuku panjang murid berdasarkan nomor urut acak sesuai keinginan guru dengan KONDISIONAL.
+    2. Guru cek kuku panjang murid berdasarkan nomor berurut dari 1 sampai menemukan murid yang kukunya panjang kemudian melanjutkan ke murid yang lain dengan cara PERULANGAN KONDISIONAL.
+
+- CARA 1.
 //  ALGORITMA
 - Buat variabel kukuPanjang yang akan menampung nomor siswa yang berkuku panjang.
 - Buat variabel nomorSiswa. Variabel ini akan menampung nomor siswa yang diinput oleh guru.
@@ -101,6 +112,7 @@ SOAL 4. PERIKSA KUKU
     - Jika nomor yang diinput pada variabel nomorSiswa SAMA DENGAN variabel kukuPanjang maka tampilkan "Siswa + nomorSiswa adalah anak yang layak dihukum karena berkuku panjang"
     - Jika nomor yang diinput pada variabel nomorSiswa LEBIH DARI variabel jumlahSiswa maka tampilkan "Siswa tidak ada"
     - Selain kriteria di atas, tampilkan "Data nomor siswa yang Anda masukkan salah"
+- Selesai.
 
 //  PSUEDOCODE
 SET jumlahSiswa TO 40;
@@ -117,3 +129,32 @@ ELSE IF nomorSiswa GREATER THAN jumlahSiswa
 ELSE
     DISPLAY Data nomor siswa + nomorSiswa + yang Anda masukkan salah
 ENDIF
+
+.
+.
+.
+
+- CARA 2.
+//  ALGORITMA
+- Buat varibel jumlahSiswa yang akan menampung data seluruh siswa.
+- Buat variabel kukuPanjang yang akan menampung data siswa yang berkuku panjang.
+- Buat variabel i dan beri nilai 1 untuk menjadi start awal nomor siswa.
+- Buat PERULANGAN yang mengurutkan seluruh siswa dari 1 - 40.
+    - Buat KONDISI JIKA saat melakukan PERULANGAN nilai i pada posisi TIDAK SAMA kukuPanjang maka tampilkan pesan Siswa + i + adalah anak yang baik.
+    - Selain KONDISI itu tampilkan pesan Siswa + i + adalah anak yang layak dihukum karena berkuku panjang.
+- Selesai.
+
+//  PSUEDOCODE
+SET jumlahSiswa TO 40;
+SET kukuPanjang TO any value that you want;
+SET i TO 1;
+
+//  LOOP
+FOR i LESS THAN EQUAL TO jumlahSiswa DO INCREMENT
+    // CHECK CONDITION
+    IF i NOT EQUAL TO kukuPanjang
+        DISPLAY Siswa + i + adalah anak yang baik.
+    ELSE
+        DISPLAY Siswa + i + adalah anak yang layak dihukum karena berkuku panjang.
+    ENDIF
+ENDFOR
