@@ -1,19 +1,16 @@
-var nama = "";
-var peran = "";
+var nama = '';
+var peran = 'asdas';
 
-if (nama && peran) {
-    console.log("Nama harus diisi!");
-} else if (nama === 'Mikael' && peran) {
-    console.log('Halo Mikael, Pilih peranmu untuk memulai game!');
-} else if (nama === "Nina" && peran === "Ksatria") {
-    console.log("Selamat datang di Dunia Proxytia, Nina" \n
-    "Halo Ksatria Nina, kamu dapat menyerang dengan senjatamu!");
-} else if (nama === "Peran" && peran === "Tabib") {
-    console.log("Selamat datang di Dunia Proxytia, Danu"\n
-    "Halo Tabib Danu, kamu akan membantu temanmu yang terluka.");
-} else if (nama === "Zero" && peran === "Penyihir") {
-    console.log ("Selamat datang di Dunia Proxytia, Zero"\n
-    "Halo Penyihir Zero, ciptakan keajaiban yang membantu kemenanganmu!");
+if ( nama === '' && peran === '' ) {
+    console.log( "Nama dan peran harus diisi!" ); //The condition if both nama and peran is not full filled.
+} else if ( nama === nama && peran === '') {
+	console.log ('Halo ' + nama + ', Pilih Peranmu untuk memulai game!'); //The condition if any nama not select peran
+} else if ( nama === 'Nina' && peran === 'Ksatria' ) {
+	console.log ("Selamat datang di Dunia Proxytia, " + nama + '\nHalo Ksatria ' + nama + ', kamu dapat menyerang dengan senjatamu!');// The condition if nama Nina select peran Ksatria
+} else if ( nama === 'Danu' && peran === 'Tabib' ) {
+	console.log("Selamat datang di Dunia Proxytia, " + nama + '\n' + "Halo Tabib " + nama + ", kamu akan membantu temanmu yang terluka.");// The condition if nama Danu select peran Tabib
+} else if ( nama === 'Zero' && peran === 'Penyihir' ) {
+	console.log("Selamat datang di Dunia Proxytia, " + nama + '\n' + "Halo Penyihir "+ nama + ", ciptakan keajaiban yang membantu kemenanganmu!");// The condition if nama Zero select peran Penyihir
 } else {
-    console.log();
+	console.log ('Kombinasi nama: ' + nama + ', dengan peran: ' + peran + ' tidak cocok. Coba lagi!');// The default condition if all condition above not full filled, ex : nama Danu select Penyihir or input is different than conditional data
 }
