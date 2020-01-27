@@ -85,3 +85,35 @@ jumlahBaju increment; // ADD 1 TO jumlahBaju
 
 IF jumlahBaju == 20
     DISPLAY Baju yang dimasukkan + jumlahBaju + mesin cuci akan menyala.
+
+- - - - - - - - - - - - -
+- - - - - - - - - - - - -
+- - - - - - - - - - - - -
+
+SOAL 4. PERIKSA KUKU
+
+//  ALGORITMA
+- Buat variabel kukuPanjang yang akan menampung nomor siswa yang berkuku panjang.
+- Buat variabel nomorSiswa. Variabel ini akan menampung nomor siswa yang diinput oleh guru.
+- Buat variabel jumlahSiswa. Variabel ini digunakan untuk memastikan siswa tidak lebih dari 40 orang.
+- Cek kondisi :
+    - Jika nomor yang diinput pada variabel nomorSiswa TIDAK SAMA DENGAN variabel kukuPanjang DAN variabel nomorSiswa KURANG DARI SAMA DENGAN variabel jumlahSiswa maka tampilkan "Siswa + nomorSiswa adalah anak yang baik"
+    - Jika nomor yang diinput pada variabel nomorSiswa SAMA DENGAN variabel kukuPanjang maka tampilkan "Siswa + nomorSiswa adalah anak yang layak dihukum karena berkuku panjang"
+    - Jika nomor yang diinput pada variabel nomorSiswa LEBIH DARI variabel jumlahSiswa maka tampilkan "Siswa tidak ada"
+    - Selain kriteria di atas, tampilkan "Data nomor siswa yang Anda masukkan salah"
+
+//  PSUEDOCODE
+SET jumlahSiswa TO 40;
+SET nomorSiswa TO value of user input;
+SET kukuPanjang TO any value;
+
+// CHECK CONDITION
+IF nomorSiswa NOT EQUAL TO kukuPanjang
+    DISPLAY Siswa + nomorSiswa + adalah anak yang baik
+ELSE IF nomorSiswa EQUAL TO kukuPanjang
+    DISPLAY Siswa + nomorSiswa + adalah anak yang layak dihukum karena berkuku panjang
+ELSE IF nomorSiswa GREATER THAN jumlahSiswa
+    DISPLAY Siswa + nomorSiswa + tidak ada
+ELSE
+    DISPLAY Data nomor siswa + nomorSiswa + yang Anda masukkan salah
+ENDIF
