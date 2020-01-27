@@ -1,0 +1,87 @@
+SOAL 1. NEWTON SECOND LAW
+
+// PSUEDOCODE
+SET massa TO 600;
+SET percepatan TO 2;
+SET resultanGaya TO massa * percepatan;
+
+DISPLAY resultanGaya;
+
+- - - - - - - - - - - - -
+- - - - - - - - - - - - -
+- - - - - - - - - - - - -
+
+SOAL 2. TAHUN KABISAT
+
+// CARA YANG DITEMUKAN SENDIRI
+//  ALGORITMA
+- Buat form input, dimana pengunjung bisa memasukkan tahun yang akan dicek.
+- Nilai dari form input tampung dalam sebuah variabel.
+- Buat variabel yang berisi nilai untuk mengecek karakteristik tahun kabisat.
+    - Variabel tahun dibagi 4.
+    - Variabel tahun dibagi 100.
+    - Variabel tahun dibagi 400.
+- Cek setiap nilai variabel apakah dia berupa bilangan bulat atau dia bilangan desimal, dan ubah menjadi nilai boolean.
+- Jika hasil bagi pada setiap variabel adalah bilangan bulat, maka hasilnya true dan hasilnya adalah tahun kabisat.
+- Jika hasil bagi pada setiap variabel adalah bilangan desimal, maka hasilnya false dan hasilnya adalah bukan tahun kabisat.
+
+//  PSUEDOCODE
+SET tahun FROM user input;
+SET result4 TO tahun DIVIDE 4, CHECK result4 INTEGER or DECIMAL;
+SET result100 TO tahun DIVIDE 100, CHECK result100 INTEGER or DECIMAL;
+SET result400 TO tahun DIVIDE 400, CHECK result400 INTEGER or DECIMAL;
+
+//  CHECK THE CONDITION
+    IF result4 AND !result100
+        DISPLAY 'Tahun ini Kabisat'
+    ELSE IF result4 AND result100 AND result400
+        DISPLAY 'Tahun ini juga Kabisat'
+    ELSE
+        DISPLAY 'Tahun ini bukan Kabisat'
+    ENDIF
+.
+.
+.
+//  CARA YANG DIDAPAT SETELAH DISKUSI DENGAN MENTOR/ INSTRUKTUR
+//  ALGORITMA
+- Buat form input, dimana pengunjung bisa memasukkan tahun yang akan dicek.
+- Nilai dari form input tampung dalam sebuah variabel.
+- Langsung cek kondisi :
+    - Jika tahun yang diinput dibagi 4 hasil sisa baginya 0 dan tahun yang diinput dibagi 100 hasil sisa baginya TIDAK SAMA DENGAN 0, maka tampilkan pesan bahwa tahun yang diinput adalah "tahun kabisat."
+    - Jika tahun yang diinput dibagi 4 hasil sisa baginya 0, dan tahun yang diinput dibagi 100 sisa hasil baginya juga 0, dan tahun yang diinput dibagi 400 sisa hasil baginya 0 juga, maka tampilkan pesan bahwa tahun yang diinput adalah "tahun kabisat."
+    - Jika nilai di atas tidak terpenuhi, tampilkan hasilnya "bukan tahun kabisat."
+
+//  PSUEDOCODE
+SET tahun TO user input or any value;
+
+//  CHECK THE CONDITION
+    IF tahun % 4 equal to 0 AND tahun % 100 not equal to 0
+        DISPLAY "Tahun Kabisat"
+    ELSE IF tahun % 4 equal to 0 AND tahun % 100 equal to 0 AND tahun % 400 equal to 0
+        DISPLAY "Tahun Kabisat"
+    ELSE
+        DISPLAY "Bukan Tahun Kabisat"
+    ENDIF
+
+- - - - - - - - - - - - -
+- - - - - - - - - - - - -
+- - - - - - - - - - - - -
+
+SOAL 3. LAUNDRY DAY
+
+//  ALGORITMA
+- Buat variabel awal yang berisi angka 1 sebagai tanda Foxie mulai memasukkan satu bajunya ke mesin cuci.
+- Buat perulangan :
+    - Setelah variabel awal dicetak, tampilkan pesan "Baju yang dimasukkan 1" dan tambahkan nilai 1 menggunakan increment, sebagai perintah agar Foxie memasukkan bajunya satu lagi ke mesin cuci, sampai total dimasukkan 20 baju.
+    - Angka 1 pada pesan yang ditampilkan diambil dari nilai yang ditampung variabel awal.
+    - Jika variabel telah awal mencapai nilai 20, maka tampilkan pesan "Mesin Cuci Menyala".
+
+//  PSUEDOCODE
+SET jumlahBaju TO 1;
+
+WHILE jumlahBaju <= 20
+    DISPLAY Baju yang dimasukkan + jumlahBaju
+jumlahBaju increment; // ADD 1 TO jumlahBaju
+
+IF jumlahBaju == 20
+    DISPLAY Baju yang dimasukkan + jumlahBaju + mesin cuci akan menyala.
