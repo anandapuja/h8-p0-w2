@@ -1,5 +1,5 @@
-var nama = '';
-var peran = 'asdas';
+var nama = 'Puja';
+var peran = 'Tabib';
 
 if ( nama === '' && peran === '' ) {
     console.log( "Nama dan peran harus diisi!" ); //The condition if both nama and peran is not full filled.
