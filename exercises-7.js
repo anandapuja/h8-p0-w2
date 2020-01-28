@@ -6,9 +6,9 @@ var rowData1 = ''; //  Buat variabel yang isinya akan diisikan dari hasil loopin
 
 for( i = 0; i < row1; i++) {
     rowData1 += '* \n';
-} // Buat looping, sekali looping jalan, tambahkan bintangnya satu dan spasi ke bawah satu ke var n
+} // Buat looping, sekali looping jalan, tambahkan bintangnya satu dan spasi ke bawah satu ke var rowData1
 
-console.log( rowData1 ); //Tampilkan hasil looping yang sudah masuk ke var n
+console.log( rowData1 ); //Tampilkan hasil looping yang sudah masuk ke var rowData1
 
 
 
@@ -20,7 +20,7 @@ var rowData2 = ''; // Buat variabel penampung data hasil looping
 
 for( i = 0; i < row2; i++) { // Mulai looping
     for ( h = 0; h < row2; h++ ) { // Looping dulu bintang pada bagian baris
-        rowData2 += '*'; // Ketika looping berhasil, tambahkan * ke var rowData
+        rowData2 += '*'; // Ketika looping berhasil, tambahkan * ke var rowData2
     }
     rowData2 += '\n'; // Tambahkan spasi ke bawah agar setelah looping baris pertama selesai, bintangnya turun ke bawah
 }
